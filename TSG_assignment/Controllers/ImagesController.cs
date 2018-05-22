@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TSG_assignmentBL;
 using TSG_assignmentBL.Models;
 
 namespace TSG_assignment.Controllers
@@ -25,6 +26,7 @@ namespace TSG_assignment.Controllers
         {
             try
             {
+                var images = ImageInit.GetImages();
                 if (images == null)
                 {
                     return NotFound();
@@ -43,6 +45,7 @@ namespace TSG_assignment.Controllers
         {
             try
             {
+                var displaySettings = SettingsInit.GetDisplaySettings();
                 if (displaySettings == null)
                 {
                     return NotFound();

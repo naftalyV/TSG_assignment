@@ -9,6 +9,9 @@ namespace TSG_assignmentBL
     {
         private const string DISPLAY_SETTINGS = "~/display_settings.json/";
 
-        private static DisplaySettings displaySettings = new DisplaySettings();
+        public static object GetDisplaySettings()
+        {
+            return null;
+        }
     }
 }

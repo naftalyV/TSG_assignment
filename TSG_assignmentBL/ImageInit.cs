@@ -12,5 +12,9 @@ namespace TSG_assignmentBL
         private const byte IMAGE_ARRAY_LENGTH = 4;
         private static Image[] images = new Image[IMAGE_ARRAY_LENGTH];
 
+        public static object GetImages()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
