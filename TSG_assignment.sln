@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSG_assignment", "TSG_assignment\TSG_assignment.csproj", "{D14C810C-BF93-43B5-8825-2F7FF533D368}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSG_assignmentBL", "TSG_assignmentBL\TSG_assignmentBL.csproj", "{760824B4-B77C-4CD8-A94B-3EB3D9E7D47A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D14C810C-BF93-43B5-8825-2F7FF533D368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D14C810C-BF93-43B5-8825-2F7FF533D368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D14C810C-BF93-43B5-8825-2F7FF533D368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{760824B4-B77C-4CD8-A94B-3EB3D9E7D47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760824B4-B77C-4CD8-A94B-3EB3D9E7D47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760824B4-B77C-4CD8-A94B-3EB3D9E7D47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760824B4-B77C-4CD8-A94B-3EB3D9E7D47A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

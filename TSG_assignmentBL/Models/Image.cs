@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace TSG_assignment.Models
+namespace TSG_assignmentBL.Models
 {
     public enum Sensor
     {
