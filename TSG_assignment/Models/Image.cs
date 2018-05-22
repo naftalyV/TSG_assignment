@@ -5,13 +5,14 @@ using System.Web;
 
 namespace TSG_assignment.Models
 {
-      public  enum Sensor
-        {
-            OGEN,
-            IKONOS,
-            GEOEYE,
-            OFEK
-        }
+    public enum Sensor
+    {
+        OGEN,
+        IKONOS,
+        GEOEYE,
+        OFEK
+    }
+
     public class Image
     {
         public string Name { get; set; }
