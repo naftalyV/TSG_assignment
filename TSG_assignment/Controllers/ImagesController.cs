@@ -9,16 +9,9 @@ using TSG_assignmentBL.Models;
 
 namespace TSG_assignment.Controllers
 {
-    [RoutePrefix("")]
+    [RoutePrefix("tsgAssignment")]
     public class ImagesController : ApiController
     {
-
-
-
-    
-
-
-
 
         [Route("getImages")]
         [HttpGet]
