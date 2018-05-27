@@ -9,9 +9,9 @@ namespace TSG_assignmentBL
 {
     public static class ImageInit
     {
-        private const string CSV_PATH = "c:\\test\\images_metadata.csv";
+       // private const string CSV_PATH = "c:\\test\\images_metadata.csv";
       
-        public static List<Image> GetImages()
+        public static List<Image> GetImages(string CSV_PATH)
         {
             var imageList = File.ReadAllLines(CSV_PATH)
                    .Skip(1)

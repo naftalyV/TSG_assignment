@@ -10,14 +10,15 @@ namespace TSG_assignmentBL
 {
     public static class SettingsInit
     {
-        private const string DISPLAY_SETTINGS = "~/display_settings.json";
+       // private const string DISPLAY_SETTINGS = "~/display_settings.json";
        // private HttpContext context = HttpContext.Current;
 
-        public static string GetDisplaySettings( )
+        public static object GetDisplaySettings(string DISPLAY_SETTINGS_PATH)
         {
-            var json = File.ReadAllText(DISPLAY_SETTINGS);
-             var result = JsonConvert.DeserializeObject<DisplaySettings>(json);
-            return "ok";
+            string json = File.ReadAllText(DISPLAY_SETTINGS_PATH);
+
+           var result = JsonConvert.DeserializeObject(json);
+            return result;
         }
     }
 }

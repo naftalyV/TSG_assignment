@@ -5,11 +5,20 @@ using System.Web;
 
 namespace TSG_assignmentBL.Models
 {
-    public  class DisplaySettings
-    {
-        private const byte SENSORS_LENGTH = 2;
+    //public class DisplaySettings
+    //{
 
-        public  Sensor[] Sensor { get; set; }
-        public  string Background { get; set; }
+    //    public Dictionary<string, List<string>> Sensor { get; set; }
+    //    public Dictionary<string, string> Background { get; set; }
+    //}
+    public class DisplaySettings
+    {
+        public List<string> Sensor { get; set; }
+        public string Background { get; set; }
+    }
+
+    public class RootObject
+    {
+        public DisplaySettings displaySettings { get; set; }
     }
 }

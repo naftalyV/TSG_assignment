@@ -7,12 +7,19 @@ using System.IO;
 using System.Web.Http;
 using TSG_assignmentBL;
 using TSG_assignmentBL.Models;
+using System.Web;
 
 namespace TSG_assignment.Controllers
 {
     [RoutePrefix("tsgAssignment")]
     public class ImagesController : ApiController
     {
+        private  HttpContext context = System.Web.HttpContext.Current;
+
+        private const string DISPLAY_SETTINGS_PATH ="~/AssignmentData/display_settings.json";
+
+        private const string CSV_PATH = "~/AssignmentData/images_metadata.csv";
+
 
         [Route("getImages")]
         [HttpGet]
@@ -20,7 +27,7 @@ namespace TSG_assignment.Controllers
         {
             try
             {
-                var images = ImageInit.GetImages();
+                var images = ImageInit.GetImages(context.Server.MapPath(CSV_PATH));
                 if (images == null)
                 {
                     return NotFound();
@@ -32,18 +39,15 @@ namespace TSG_assignment.Controllers
                 return BadRequest(string.Concat(ex.ToString(), " ____ ", ex.StackTrace));
             }
         }
-        private const string DISPLAY_SETTINGS = "~/AssignmentData/display_settings.json";
+
         [Route("getDisplaySettings")]
         [HttpGet]
         public IHttpActionResult GetDisplaySettings()
         {
             try
             {
-                System.Web.HttpContext context = System.Web.HttpContext.Current;
-                string json = File.ReadAllText(context.Server.MapPath(DISPLAY_SETTINGS));
-                DisplaySettings result = Newtonsoft.Json.JsonConvert.DeserializeObject<DisplaySettings>(json);
-
-                string displaySettings = SettingsInit.GetDisplaySettings();
+          
+                var displaySettings = SettingsInit.GetDisplaySettings(context.Server.MapPath(DISPLAY_SETTINGS_PATH));
                 if (displaySettings == null)
                 {
                     return NotFound();
