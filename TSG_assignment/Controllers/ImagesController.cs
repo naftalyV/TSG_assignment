@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.IO;
 using System.Web.Http;
 using TSG_assignmentBL;
 using TSG_assignmentBL.Models;
@@ -31,21 +32,23 @@ namespace TSG_assignment.Controllers
                 return BadRequest(string.Concat(ex.ToString(), " ____ ", ex.StackTrace));
             }
         }
-
+        private const string DISPLAY_SETTINGS = "~/AssignmentData/display_settings.json";
         [Route("getDisplaySettings")]
         [HttpGet]
         public IHttpActionResult GetDisplaySettings()
         {
             try
             {
-                // SettingsInit.GetDisplaySettings();
-                var displaySettings = SettingsInit.GetDisplaySettings();
+                System.Web.HttpContext context = System.Web.HttpContext.Current;
+                string json = File.ReadAllText(context.Server.MapPath(DISPLAY_SETTINGS));
+                DisplaySettings result = Newtonsoft.Json.JsonConvert.DeserializeObject<DisplaySettings>(json);
+
+                string displaySettings = SettingsInit.GetDisplaySettings();
                 if (displaySettings == null)
                 {
                     return NotFound();
                 }
                 return Ok(displaySettings);
-               // return Ok();
             }
             catch (Exception ex)
             {

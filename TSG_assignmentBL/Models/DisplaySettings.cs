@@ -7,11 +7,9 @@ namespace TSG_assignmentBL.Models
 {
     public  class DisplaySettings
     {
-       
+        private const byte SENSORS_LENGTH = 2;
 
-        
-
-        public  List<string> Sensors { get; set; }
+        public  Sensor[] Sensor { get; set; }
         public  string Background { get; set; }
     }
 }
