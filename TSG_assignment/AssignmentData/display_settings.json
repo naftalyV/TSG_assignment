@@ -1,5 +1,5 @@
 {
-  "display-settings": {
+  "displaySettings": {
     "Sensor": [ "OGEN", "IKONOS" ],
     "Background": "Blue"
   }

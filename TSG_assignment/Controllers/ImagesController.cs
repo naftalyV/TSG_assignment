@@ -38,12 +38,14 @@ namespace TSG_assignment.Controllers
         {
             try
             {
+                // SettingsInit.GetDisplaySettings();
                 var displaySettings = SettingsInit.GetDisplaySettings();
                 if (displaySettings == null)
                 {
                     return NotFound();
                 }
                 return Ok(displaySettings);
+               // return Ok();
             }
             catch (Exception ex)
             {
