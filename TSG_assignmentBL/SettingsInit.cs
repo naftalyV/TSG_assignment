@@ -11,6 +11,7 @@ namespace TSG_assignmentBL
 
         public static object GetDisplaySettings()
         {
+             var result = JsonConvert.DeserializeObject<int>(body);
             return null;
         }
     }
